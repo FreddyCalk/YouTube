@@ -3,8 +3,22 @@ $lt-gray: #bbb;
 .A{
 	border-bottom: 1px solid black;
 }
+.B{
+
+	#prof-pic{
+		img{
+			width:100%;
+		}
+	}
+}
+#prof-info{
+	font-size:10px;
+}
 #image{
 	width:100%;
+}
+#profile{
+	border: 1px solid black;
 }
 #view-box{
 	background-color: $gray;
@@ -36,3 +50,12 @@ $lt-gray: #bbb;
 		width:100%;
 	}
 }
+
+.vid-item{
+	margin:2%;
+}
+
+
+
+
+
