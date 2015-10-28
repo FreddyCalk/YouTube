@@ -1,0 +1,36 @@
+$gray: #999;
+$lt-gray: #bbb;
+
+#image{
+	width:100%;
+}
+#view-box{
+	background-color: $gray;
+}
+#video-queue{
+	margin-top:5%;
+
+
+	.queue-text{
+		font-size:8px;
+	}
+}
+#video-box{
+
+	iframe{
+		padding-bottom: 5%;
+	}
+
+}
+.C{
+	background-color: $gray;
+	img{
+
+	}
+}
+#ad-window{
+	background-color: $lt-gray;
+	img{
+		width:100%;
+	}
+}

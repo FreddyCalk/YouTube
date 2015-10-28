@@ -1,0 +1,37 @@
+/* line 4, ../compass/sass/style.scss */
+#image {
+  width: 100%;
+}
+
+/* line 7, ../compass/sass/style.scss */
+#view-box {
+  background-color: #999;
+}
+
+/* line 10, ../compass/sass/style.scss */
+#video-queue {
+  margin-top: 5%;
+}
+/* line 14, ../compass/sass/style.scss */
+#video-queue .queue-text {
+  font-size: 8px;
+}
+
+/* line 20, ../compass/sass/style.scss */
+#video-box iframe {
+  padding-bottom: 5%;
+}
+
+/* line 25, ../compass/sass/style.scss */
+.C {
+  background-color: #999;
+}
+
+/* line 31, ../compass/sass/style.scss */
+#ad-window {
+  background-color: #bbb;
+}
+/* line 33, ../compass/sass/style.scss */
+#ad-window img {
+  width: 100%;
+}
