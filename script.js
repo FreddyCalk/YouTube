@@ -101,7 +101,7 @@ $(document).ready(function(){
 					html+= '<img class="col-md-4" src='+otherVideos[i].thumb+'>';
 					html+= '<div class="title col-md-8">'+titleShort+'</div>'
 					html+= '<div class="author col-md-8">By: '+otherVideos[i].postedBy+'</div>'
-					html+= '<div class="views col-md-8">Views: '+otherVideos[i].totalViews+'</div>'
+					html+= '<div class="views col-md-8">'+otherVideos[i].totalViews+' Views</div>'
 				html+= '</div></a>'
 		$('#related-videos').append(html);
 			}
@@ -114,16 +114,16 @@ $(document).ready(function(){
 				html2 += "<img class='col-xs-6' src="+otherVideos[i].thumb+">";
 				html2 += "<div class='info col-xs-6'><div class='title'>"+titleShort+"</div>";
 				html2 += "<div class='author'>By: "+otherVideos[i].postedBy+"</div>";
-				html2 += "<div class='views'>Views: "+otherVideos[i].totalViews+"</div>";
+				html2 += "<div class='views'>"+otherVideos[i].totalViews+" Views</div>";
 				html2 += "</div></div></a>";
 		$('#more-videos').append(html2);
 	}
 })
 
-	
-
-
-
+// $("#nav-bar li a").click(function(){
+// 		$(".active").removeClass("active");
+// 		$(this).addClass("active");
+// 	});
 
 	
 		

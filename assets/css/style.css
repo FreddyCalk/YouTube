@@ -157,3 +157,20 @@
 #gap1, #gap2 {
   height: 25px;
 }
+
+/* line 142, ../compass/sass/style.scss */
+.active {
+  padding-bottom: 2px;
+  border-bottom: 1px solid #009;
+}
+
+/* line 146, ../compass/sass/style.scss */
+a {
+  color: #009;
+}
+
+/* line 149, ../compass/sass/style.scss */
+a:hover {
+  text-decoration: none;
+  color: #009;
+}
