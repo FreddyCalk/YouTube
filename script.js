@@ -104,6 +104,28 @@ $(document).ready(function(){
 					html+= '<div class="views col-md-8">Views: '+otherVideos[i].totalViews+'</div>'
 				html+= '</div></a>'
 		$('#related-videos').append(html);
+			}
+
+	})
+$(document).ready(function(){
+		for(i=0;i<8;i++){
+			var titleShort= otherVideos[i].title.slice(0,otherVideos[i].title.indexOf('-'));
+				var html2 = "<a href="+otherVideos[i].url+"<div class='col-xs-3 thumb'>";
+				html2 += "<img class='col-xs-6' src="+otherVideos[i].thumb+">";
+				html2 += "<div class='info col-xs-6'><div class='title'>"+titleShort+"</div>";
+				html2 += "<div class='author'>By: "+otherVideos[i].postedBy+"</div>";
+				html2 += "<div class='views'>Views: "+otherVideos[i].totalViews+"</div>";
+				html2 += "</div></div></a>";
+		$('#more-videos').append(html2);
+	}
+})
+
+	
+
+
+
+
+	
 		
 		// $('#add0video0form').submit(function(){
 		// 	var theObject = {
@@ -119,5 +141,4 @@ $(document).ready(function(){
 		// 	updateVideos();
 		// 	event.preventDefault();
 		// })
-	}
-})
+

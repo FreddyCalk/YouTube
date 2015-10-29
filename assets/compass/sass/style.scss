@@ -1,5 +1,6 @@
 $gray: #999;
 $lt-gray: #ddd;
+
 .A{
 	border-bottom: 1px solid black;
 	.search-bar{
@@ -9,6 +10,16 @@ $lt-gray: #ddd;
 	.links{
 		margin-top:3%;
 	}
+	.row{
+		text-align: center;
+		span{
+			margin:0px 8%;
+		}
+	}
+	.row.two{
+		margin-bottom:2%;
+		}
+	
 }
 .B{
 
@@ -16,6 +27,36 @@ $lt-gray: #ddd;
 		img{
 			width:100%;
 		}
+	}
+	.row{
+		#comment-section{
+			padding-left:0px;
+
+			#comment-header{
+				padding-left:0px;
+			}
+			
+			#comment1, #comment2{
+				padding-left:0;
+				.user{
+					margin-bottom:2.5%;
+					padding-left:0px;
+				}
+			}
+		}
+
+
+	}
+
+
+}
+#more-videos{
+	.thumb{
+		margin:2.5% 0%;
+	}
+	.info{
+		padding:3%;
+		font-size:10px;
 	}
 }
 #prof-info{
@@ -27,9 +68,28 @@ $lt-gray: #ddd;
 #profile{
 	border: 1px solid black;
 	margin-bottom:2%;
+	#prof-pic{
+		
+		padding: 0;
+
+		img{
+			width: 100%;
+			margin-left: 15%;
+
+		}
+	}
+	#name{
+			margin-top: 4%;
+		}
+	#subscribebtn{
+			margin: 8% 2% 0% 8%;
+		}
+	
+
 }
 #view-box{
 	background-color: $gray;
+	padding-bottom:15px;
 }
 #video-queue{
 	margin-top:5%;
@@ -40,22 +100,36 @@ $lt-gray: #ddd;
 	}
 }
 #video-box{
-
+	padding-left:0px;
 	iframe{
-		padding-bottom: 5%;
+		padding-bottom: 1%;
+	}
+	#views{
+		text-align: right;
+		padding-right:0;
+		padding-top: 7.5%;
+	}
+	.glyphicon{
+		font-size: 30px;
+		top: 9px;
+	}
+	.atag{
+		padding: 0px 15px 10px;
 	}
 
 }
 .C{
 	background-color: $lt-gray;
-	img{
-
+	.row{
+		margin-bottom:2.5%;
 	}
 }
 #ad-window{
 	background-color: $lt-gray;
+	height:408px;
 	img{
 		width:100%;
+		margin-top:20px;
 	}
 }
 
