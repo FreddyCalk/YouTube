@@ -96,8 +96,28 @@ $(document).ready(function(){
 	for(i=0;i<otherVideos.length;i++){
 		var hoverTitle = otherVideos[i].title;
 		var titleShort = otherVideos[i].title.slice(0,otherVideos[i].title.indexOf('-'));
+		var html = '<a href='+otherVideos[i].url+' data-toggle="tooltip" title='+hoverTitle+'>';
+				html+= '<div class="vid-item col-md-12">'
+					html+= '<img class="col-md-4" src='+otherVideos[i].thumb+'>';
+					html+= '<div class="title col-md-8">'+titleShort+'</div>'
+					html+= '<div class="author col-md-8">By: '+otherVideos[i].postedBy+'</div>'
+					html+= '<div class="views col-md-8">Views: '+otherVideos[i].totalViews+'</div>'
+				html+= '</div></a>'
+		$('#related-videos').append(html);
 		
-		$('#related-videos').append('<a href='+otherVideos[i].url+' data-toggle="tooltip" title='+hoverTitle+'><div class="vid-item col-md-12"><img class="col-md-4" src="'+otherVideos[i].thumb+'"><div class="title col-md-8">'+titleShort+'</div><div class="author col-md-8">By: '+otherVideos[i].postedBy+'</div><div class="views col-md-8">Views: '+otherVideos[i].totalViews+'</div></div></a>');
-	
+		// $('#add0video0form').submit(function(){
+		// 	var theObject = {
+		// 		title: $('#title').val(),
+		// 		thumb: $('#thumb').val(),
+		// 		url: $('#url').val(),
+		// 		duration: $('#duration').val(),
+		// 		postedBy: $('#posted-by').val(),
+		// 		totalViews: $('#total-views').val()
+		// 	}
+		// 	otherVideos.unshift(theObject)
+		// 	otherVideos.pop();
+		// 	updateVideos();
+		// 	event.preventDefault();
+		// })
 	}
 })

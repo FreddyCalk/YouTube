@@ -2,61 +2,76 @@
 .A {
   border-bottom: 1px solid black;
 }
-
+/* line 5, ../compass/sass/style.scss */
+.A .search-bar {
+  margin-top: 10%;
+  width: 70%;
+}
 /* line 9, ../compass/sass/style.scss */
+.A .links {
+  margin-top: 3%;
+}
+
+/* line 16, ../compass/sass/style.scss */
 .B #prof-pic img {
   width: 100%;
 }
 
-/* line 14, ../compass/sass/style.scss */
+/* line 21, ../compass/sass/style.scss */
 #prof-info {
   font-size: 10px;
 }
 
-/* line 17, ../compass/sass/style.scss */
+/* line 24, ../compass/sass/style.scss */
 #image {
   width: 100%;
 }
 
-/* line 20, ../compass/sass/style.scss */
+/* line 27, ../compass/sass/style.scss */
 #profile {
   border: 1px solid black;
+  margin-bottom: 2%;
 }
 
-/* line 23, ../compass/sass/style.scss */
+/* line 31, ../compass/sass/style.scss */
 #view-box {
   background-color: #999;
 }
 
-/* line 26, ../compass/sass/style.scss */
+/* line 34, ../compass/sass/style.scss */
 #video-queue {
   margin-top: 5%;
 }
-/* line 30, ../compass/sass/style.scss */
+/* line 38, ../compass/sass/style.scss */
 #video-queue .queue-text {
   font-size: 8px;
 }
 
-/* line 36, ../compass/sass/style.scss */
+/* line 44, ../compass/sass/style.scss */
 #video-box iframe {
   padding-bottom: 5%;
 }
 
-/* line 41, ../compass/sass/style.scss */
+/* line 49, ../compass/sass/style.scss */
 .C {
-  background-color: #999;
+  background-color: #ddd;
 }
 
-/* line 47, ../compass/sass/style.scss */
+/* line 55, ../compass/sass/style.scss */
 #ad-window {
-  background-color: #bbb;
+  background-color: #ddd;
 }
-/* line 49, ../compass/sass/style.scss */
+/* line 57, ../compass/sass/style.scss */
 #ad-window img {
   width: 100%;
 }
 
-/* line 54, ../compass/sass/style.scss */
+/* line 62, ../compass/sass/style.scss */
 .vid-item {
-  margin: 2%;
+  padding: 2%;
+}
+
+/* line 65, ../compass/sass/style.scss */
+#gap1, #gap2 {
+  height: 25px;
 }
