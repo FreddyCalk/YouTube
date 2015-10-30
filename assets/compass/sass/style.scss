@@ -22,7 +22,8 @@ $blue: #009;
 	
 }
 .B{
-
+	padding-left: 0%;
+	padding-right: 0%;
 	#prof-pic{
 		img{
 			width:100%;
@@ -90,7 +91,7 @@ $blue: #009;
 #view-box{
 	background-color: $gray;
 	padding-bottom:15px;
-}
+
 #video-queue{
 	margin-top:5%;
 
