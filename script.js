@@ -120,6 +120,16 @@ $(document).ready(function(){
 	}
 })
 
+$(document).ready(function(){
+		for(i=0;i<3;i++){
+			var html3 = "<a href="+videosBySamePoster[i].url+"<img class='col-xs-4' src="+videosBySamePoster[i].thumb+">"
+				html3 +="<div class='queue-text col-xs-8'><div class='title'>"+videosBySamePoster[i].title+"</div>";
+				html3 +="<div class='posted-by'>"+videosBySamePoster[i].postedBy+"</div>";
+				html3 +="<div class='duration'>"+videosBySamePoster[i].duration+"</div></div></a>";
+		$('#video-queue').append(html3);
+		}
+})
+
 // $("#nav-bar li a").click(function(){
 // 		$(".active").removeClass("active");
 // 		$(this).addClass("active");
