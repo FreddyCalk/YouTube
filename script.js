@@ -124,9 +124,9 @@ $(document).ready(function(){
 		for(i=0;i<3;i++){
 			var titleShort = videosBySamePoster[i].title.slice(0,videosBySamePoster[i].title.indexOf('-'));
 			var html3 = "<div class='queue-text col-xs-12'><a href="+videosBySamePoster[i].url+"><img id='thumb' class='col-xs-4' src="+videosBySamePoster[i].thumb+">"
-				html3 +="<div class='other title'>"+titleShort+"</div>";
-				html3 +="<div class='other posted-by'>By: "+videosBySamePoster[i].postedBy+"</div>";
-				html3 +="<div class='other duration'>"+videosBySamePoster[i].totalViews+" Views</div></a></div>";
+				html3 +="<div class='title'>"+titleShort+"</div>";
+				html3 +="<div class='posted-by'>By: "+videosBySamePoster[i].postedBy+"</div>";
+				html3 +="<div class='duration'>"+videosBySamePoster[i].totalViews+" Views</div></a></div>";
 		$('#video-queue').append(html3);
 		}
 })
