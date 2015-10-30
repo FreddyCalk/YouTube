@@ -67,7 +67,7 @@ var otherVideos = [
 
 var videosBySamePoster = [
 	{
-	    title: "StarCraft II: Legacy of the Void Opening Cinematic",
+	    title: "StarCraft II - Legacy of the Void Opening Cinematic",
 	    thumb: "https://i.ytimg.com/vi_webp/M_XwzBMTJaM/default.webp",
 	    url: "https://www.youtube.com/watch?v=M_XwzBMTJaM",
 	    duration: "29:51",
@@ -122,10 +122,11 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 		for(i=0;i<3;i++){
-			var html3 = "<a href="+videosBySamePoster[i].url+"<img class='col-xs-4' src="+videosBySamePoster[i].thumb+">"
-				html3 +="<div class='queue-text col-xs-8'><div class='title'>"+videosBySamePoster[i].title+"</div>";
-				html3 +="<div class='posted-by'>"+videosBySamePoster[i].postedBy+"</div>";
-				html3 +="<div class='duration'>"+videosBySamePoster[i].duration+"</div></div></a>";
+			var titleShort = videosBySamePoster[i].title.slice(0,videosBySamePoster[i].title.indexOf('-'));
+			var html3 = "<div class='queue-text col-xs-12'><a href="+videosBySamePoster[i].url+"><img id='thumb' class='col-xs-4' src="+videosBySamePoster[i].thumb+">"
+				html3 +="<div class='other title'>"+titleShort+"</div>";
+				html3 +="<div class='other posted-by'>By: "+videosBySamePoster[i].postedBy+"</div>";
+				html3 +="<div class='other duration'>"+videosBySamePoster[i].totalViews+" Views</div></a></div>";
 		$('#video-queue').append(html3);
 		}
 })
