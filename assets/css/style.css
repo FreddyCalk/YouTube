@@ -101,7 +101,7 @@
 
 /* line 95, ../compass/sass/style.scss */
 #view-box {
-  background-color: #999;
+  background-color: #ccc;
   padding-bottom: 15px;
 }
 
@@ -150,7 +150,7 @@
 
 /* line 133, ../compass/sass/style.scss */
 .C {
-  background-color: #ddd;
+  background-color: #eee;
 }
 /* line 135, ../compass/sass/style.scss */
 .C .row {
@@ -159,7 +159,7 @@
 
 /* line 139, ../compass/sass/style.scss */
 #ad-window {
-  background-color: #ddd;
+  background-color: #eee;
   height: 418px;
   margin-left: 5%;
   width: 28%;
