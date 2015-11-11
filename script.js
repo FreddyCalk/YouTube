@@ -7,7 +7,10 @@ angular.module('myApp',[]).controller('myController', function($scope,$http){
 
     $http.get(playlistUrl).success(function(data) {
         $scope.videos = data.items;
-        $scope.relaventVideos = [data.items[0],data.items[1],data.items[2],data.items[3],data.items[4],data.items[5],data.items[6],data.items[7]];
+        $scope.relaventVideos = [];
+        for(i=0;i<8;i++){
+        	$scope.relaventVideos.push(data.items[i]);
+        }
 
         console.log(data.items);
     });
