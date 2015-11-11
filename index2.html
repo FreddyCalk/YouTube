@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <title>YouTube.com/video</title>
 
     <script src="jquery.min.js"></script>
+    <script src="angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body ng-controller="myController">
 	<div class="container A">
         <div class="row">
             <div id="youtube" class="col-xs-2">
@@ -125,9 +126,18 @@
                 </div>
             </div>
         <div class="row">
-            <div id="related-videos" class="col-xs-4">
-
-            </div>
+            <div id="related-videos" class="col-xs-3" ng-repeat="video in otherVideos" class="row col-xs-12">
+            <a href={{video.url}}>
+                <div>
+                    <img class='col-xs-6' src={{video.thumb}}>
+                    <div class='info col-xs-6'>
+                        <div class='title'>{{video.title}}</div>
+                        <div class='author'>By: {{video.postedBy}}</div>
+                        <div class='views'>{{video.totalViews}} Views</div>
+                    </div>
+                </div>
+            </a>
+        </div>
 
 
 

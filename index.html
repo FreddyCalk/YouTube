@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
     <title>YouTube.com</title>
     <script src="jquery.min.js"></script>
+    <script src="angular.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css"> 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body ng-controller="myController">
     <div class="container A">
         <div class="row">
             <div class="col-xs-2" id="youtube">
@@ -51,8 +52,15 @@
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RGJb2iLvOKE?autoplay=false"></iframe>
                 </div>
             </div>
-            <div id="video-queue" class="col-xs-4">
-               
+            <div id="video-queue" ng-repeat="videos in videosBySamePoster" class="col-xs-4">
+                <div class='queue-text col-xs-12'>
+                    <a href={{videos.url}}>
+                        <img id='thumb' class='col-xs-4' src={{videos.thumb}}>
+                        <div class='title'>{{videos.title}}</div>
+                        <div class='posted-by'>By: {{videos.postedBy}}</div>
+                        <div class='duration'>{{videos.totalViews}} Views</div>
+                    </a>
+                </div>"
             </div>
         </div>
         <a href="#" data-toggle="modal" data-target="#myModal">
@@ -66,13 +74,20 @@
     </div>
 
     <div class="container C">
-    
         <div class="col-xs-12">
             <h4>More Videos</h4>
         </div>
-        <div id="more-videos" class="row col-xs-12">
-            
-            </div>
+        <div id="more-videos" class="col-xs-3" ng-repeat="video in otherVideos" class="row col-xs-12">
+            <a href={{video.url}}>
+                <div>
+                    <img class='col-xs-6' src={{video.thumb}}>
+                    <div class='info col-xs-6'>
+                        <div class='title'>{{video.title}}</div>
+                        <div class='author'>By: {{video.postedBy}}</div>
+                        <div class='views'>{{video.totalViews}} Views</div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 
@@ -85,17 +100,7 @@
                 </div>
                 <div class="modal-body">
                     <img src="http://www.wevegotthekeys.com/images/key-west-experience.jpg">
-                    <p>&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#47;&#180;&#175;&#47;&#41;&#32;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#44;&#47;&#175;&#46;&#46;&#47;&#32;&#46;&#46;&#46;&#46;&#46;&#46;&#46;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#47;&#46;&#46;&#46;&#46;&#47;&#32;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#47;&#180;&#175;&#47;&#39;&#46;&#46;&#46;&#39;&#47;&#180;&#175;&#175;&#96;&#183;&#184;&#32;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#47;&#39;&#47;&#46;&#46;&#46;&#47;&#46;&#46;&#46;&#46;&#47;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#47;&#168;&#175;&#92;&#32;&#46;&#46;&#46;&#46;&#46;&#46;&#46;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#40;&#39;&#40;&#46;&#46;&#46;&#180;&#46;&#46;&#46;&#180;&#46;&#46;&#46;&#46;&#32;&#175;&#126;&#47;&#39;&#46;&#46;&#46;&#39;&#41;&#32;&#46;&#46;&#46;&#46;&#46;&#46;&#46;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#92;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#39;&#46;&#46;&#46;&#46;&#46;&#47;&#32;&#46;&#46;&#46;&#46;&#46;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#39;&#39;&#46;&#46;&#46;&#92;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#32;&#95;&#46;&#183;&#180;&#32;<br/>
-                    &#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#92;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;&#46;<br/>
-                    Bitch, I'm on vacation!
-                    </p>
+                    <p>This is a caption in a Modal</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
