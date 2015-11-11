@@ -60,7 +60,7 @@
                         <div class='posted-by'>By: {{videos.postedBy}}</div>
                         <div class='duration'>{{videos.totalViews}} Views</div>
                     </a>
-                </div>"
+                </div>
             </div>
         </div>
         <a href="#" data-toggle="modal" data-target="#myModal">
@@ -77,12 +77,12 @@
         <div class="col-xs-12">
             <h4>More Videos</h4>
         </div>
-        <div id="more-videos" class="col-xs-3" ng-repeat="video in otherVideos" class="row col-xs-12">
-            <a href={{video.url}}>
+        <div id="more-videos" class="col-xs-3" ng-repeat="video in relaventVideos" class="row col-xs-12">
+            <a href="https://www.youtube.com/watch?v={{video.snippet.resourceId.videoId}}">
                 <div>
-                    <img class='col-xs-6' src={{video.thumb}}>
+                    <img class='col-xs-6' src={{video.snippet.thumbnails.default.url}}>
                     <div class='info col-xs-6'>
-                        <div class='title'>{{video.title}}</div>
+                        <div class='title'>{{video.snippet.title}}</div>
                         <div class='author'>By: {{video.postedBy}}</div>
                         <div class='views'>{{video.totalViews}} Views</div>
                     </div>

@@ -1,4 +1,16 @@
-angular.module('myApp',[]).controller('myController', function($scope){
+angular.module('myApp',[]).controller('myController', function($scope,$http){
+	
+	var playlistId = 'PLzuVrxysbyPmsGvXZcP5ydK7ZUaNK08qI';
+	var apiKey = 'AIzaSyB2lNSSKXomd6QuNG482vX-BHv85O1sacA';
+	var playlistUrl = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=30&playlistId='+playlistId+'+&key='+apiKey;
+    // $scope.singleVideoUrl = 'https://www.googleapis.com/youtube/v3/videos?id='+videoId+'&part=snippet,statistics&key='+apiKey;
+
+    $http.get(playlistUrl).success(function(data) {
+        $scope.videos = data.items;
+        $scope.relaventVideos = [data.items[0],data.items[1],data.items[2],data.items[3],data.items[4],data.items[5],data.items[6],data.items[7]];
+
+        console.log(data.items);
+    });
 
 	$scope.otherVideos = [
 	{
